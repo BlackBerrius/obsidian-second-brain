@@ -257,6 +257,8 @@ research commands).
 
 ## Prerequisites
 
+What you need: Grok Bot is part of The X Subscription (Premium, Super, Ultra), with one weekly usage pool shared with Grok and Cursor (https://cursor.com/help/grok-bot/plans).
+
 1. **MCP server connected.** Grok Bot already has the \`user-obsidian-second-brain\`
    MCP server available. Verify it by asking: "Do you have access to obsidian_search
    and obsidian_save_note?" The agent should confirm these MCP tools are present.
@@ -304,6 +306,10 @@ Once loaded, invoke skills by name:
 The agent will use the MCP \`obsidian_*\` tools under the hood, format the notes
 according to the AI-first spec (embedded in every skill), and validate the output
 automatically via \`obsidian_validate_note\`.
+
+Grok Bot can write a live Page, such as a report, a dashboard, or a plan. The Page opens from a card in the chat, stays in the bot's Library, and you can share it with only you, your team, or anyone with the link. A weekly review or a project dashboard from your vault fits this.
+
+On an iPhone 15 Pro or later, one press of the Action Button starts a voice chat with Grok Bot. You need Grok Bot 1.16 or later, and you set it in iPhone Settings > Action Button > Shortcut. Use it to speak a thought and save it into the vault.
 
 ## What is NOT covered
 
