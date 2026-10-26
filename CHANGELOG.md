@@ -6,6 +6,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 
 ## [Unreleased]
 
+### Fixed
+
+- **`move_note` raised instead of returning an error when a destination parent was a file (follow-up to #343, by @tonydzi).** Moving to `wiki/Contact.md/note.md` while `wiki/Contact.md` is a note made `dst.parent.mkdir(...)` raise `FileExistsError`, and a file further up raised `NotADirectoryError`; both escaped the tool as exceptions. It now returns `could not create the destination folder: ...` and leaves the source untouched. A parametrized test in `tests/test_mcp_codex_parity.py` covers both shapes and fails on the previous `main`.
+
 ## [0.20.0] - 2026-10-25 - The Batch
 
 ### Added

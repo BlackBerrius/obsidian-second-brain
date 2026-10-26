@@ -1081,7 +1081,12 @@ def move_note(source: str, destination: str) -> Dict[str, Any]:
         return {"error": f"not found: {source}"}
     if dst.exists():
         return {"error": f"destination already exists: {destination}"}
-    dst.parent.mkdir(parents=True, exist_ok=True)
+    try:
+        dst.parent.mkdir(parents=True, exist_ok=True)
+    except OSError as exc:
+        # A parent that is an existing file raises FileExistsError, an ancestor
+        # that is one raises NotADirectoryError; neither may escape the tool.
+        return {"error": f"could not create the destination folder: {exc}"}
     # A preflight exists() check followed by os.replace() has a race: another
     # writer can create the destination between them and be overwritten. So the
     # destination is created with O_CREAT | O_EXCL, which fails if it exists in
