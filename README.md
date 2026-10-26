@@ -6,7 +6,7 @@
 
 <p align="center">
   <a href="#install"><img src="https://img.shields.io/badge/Claude_Code-D97757?style=for-the-badge&logo=anthropic&logoColor=white" alt="Claude Code" /></a>
-  <a href="#grok-bot"><img src="https://img.shields.io/badge/Grok_Bot-000000?style=for-the-badge&logo=x&logoColor=white" alt="Grok Bot" /></a>
+  <a href="#use-it-in-grok-bot"><img src="https://img.shields.io/badge/Grok_Bot-000000?style=for-the-badge&logo=x&logoColor=white" alt="Grok Bot" /></a>
   <a href="#codex-cli--gemini-cli--opencode"><img src="https://img.shields.io/badge/Codex_CLI-412991?style=for-the-badge&logo=openai&logoColor=white" alt="Codex CLI" /></a>
   <a href="#codex-cli--gemini-cli--opencode"><img src="https://img.shields.io/badge/Gemini_CLI-4285F4?style=for-the-badge&logo=googlegemini&logoColor=white" alt="Gemini CLI" /></a>
   <a href="#codex-cli--gemini-cli--opencode"><img src="https://img.shields.io/badge/OpenCode-181818?style=for-the-badge&logo=opensourceinitiative&logoColor=white" alt="OpenCode" /></a>
@@ -769,6 +769,12 @@ pi install ./dist/pi          # or: cp -R dist/pi/.pi/ /path/to/your/vault/
 ```
 
 The **Pi build emits a native [Pi](https://pi.dev) package**: prompt templates under `.pi/prompts/` (invoke as `/obsidian-save`, `/obsidian-daily`, etc.) plus a discovery skill under `.pi/skills/obsidian-second-brain/` (load with `/skill:obsidian-second-brain`). Pi reads the same `~/.config/obsidian-second-brain/.env` keys as the other platforms. It has no background-agent equivalent, and the scheduled agents (`obsidian-nightly` and the others) are prompts, not commands, so Pi has no `/obsidian-nightly` to type. To run one, copy its prompt from the scheduled agents section of `SKILL.md` into a Pi session, by hand or from your own scheduler. (Contributed by @Gepetdo.)
+
+### Use it in Grok Bot
+
+Obsidian Second Brain turns what's on your mind into linked notes in your Obsidian vault, keeps your daily notes, and answers your questions from your own notes with links back to the source.
+
+Start from the official Obsidian Second Brain bot template: https://x.ai/bot/Oj_doyprowDl817Yk5Rbh
 
 ### Grok Bot / Sand
 
